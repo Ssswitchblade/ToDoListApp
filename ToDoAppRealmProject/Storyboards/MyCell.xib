@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" id="dX3-sa-VL4" customClass="MyCell" customModule="ToDoAppRealmProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dX3-sa-VL4" id="E30-Ye-Beu">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my6-j5-mRq">
+                        <rect key="frame" x="378" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="SAh-dA-O5n"/>
+                            <constraint firstAttribute="height" constant="20" id="WGg-vk-ZGe"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                        <connections>
+                            <action selector="deleteCellBtnTpd:" destination="dX3-sa-VL4" eventType="touchUpInside" id="juN-M4-rmS"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-BO-Suk">
+                        <rect key="frame" x="342" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="PY4-6o-oDI"/>
+                            <constraint firstAttribute="height" constant="20" id="yMx-ms-bGk"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="square.and.pencil" catalog="system"/>
+                        <connections>
+                            <action selector="editCellBtnTpd:" destination="dX3-sa-VL4" eventType="touchUpInside" id="Ez7-Tk-V5s"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywc-Kk-jxD">
+                        <rect key="frame" x="16" y="12" width="180" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="O0M-6D-5lY"/>
+                            <constraint firstAttribute="height" constant="20" id="o8W-mG-2B9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="my6-j5-mRq" secondAttribute="trailing" constant="16" id="DD7-mW-ueM"/>
+                    <constraint firstItem="my6-j5-mRq" firstAttribute="centerY" secondItem="E30-Ye-Beu" secondAttribute="centerY" id="RY6-O5-W13"/>
+                    <constraint firstItem="my6-j5-mRq" firstAttribute="leading" secondItem="o5k-BO-Suk" secondAttribute="trailing" constant="16" id="TwH-Cj-H7F"/>
+                    <constraint firstItem="Ywc-Kk-jxD" firstAttribute="leading" secondItem="E30-Ye-Beu" secondAttribute="leading" constant="16" id="Xlo-WM-Kkh"/>
+                    <constraint firstItem="Ywc-Kk-jxD" firstAttribute="centerY" secondItem="E30-Ye-Beu" secondAttribute="centerY" id="b6j-vJ-rgn"/>
+                    <constraint firstItem="o5k-BO-Suk" firstAttribute="centerY" secondItem="E30-Ye-Beu" secondAttribute="centerY" id="bcT-aI-2Df"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="delete" destination="my6-j5-mRq" id="bjs-aR-teI"/>
+                <outlet property="edit" destination="o5k-BO-Suk" id="8te-me-noj"/>
+                <outlet property="labelCell" destination="Ywc-Kk-jxD" id="Co4-2v-6Ec"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="-44"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
+</document>
